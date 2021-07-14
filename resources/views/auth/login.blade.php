@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
@@ -45,10 +45,10 @@
             </div>
         </form>
     </x-jet-authentication-card>
-</x-guest-layout>
+</x-guest-layout> --}}
 
 
-{{--  <x-base-layout>
+ <x-base-layout>
     <div class="section-title-01 honmob">
         <div class="bg_parallax image_02_parallax"></div>
         <div class="opacy_bg_02">
@@ -75,9 +75,9 @@
                             <div class="thinborder-ontop">
                                 <h3>Login Info</h3>
                                 <x-jet-validation-errors class="mb-4" />
-                                <form id="userloginform">                                        
-                                    <div class="form-group row" method="POST" action="{{ route('login') }}">
-                                        @csrf
+                                <form id="userloginform" method="POST" action="{{ route('login') }}">   
+                                    @csrf                       
+                                    <div class="form-group row">
                                         <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
                                         <div class="col-md-6">
                                             <input id="email" type="email" class="form-control" name="email" value="" required="" autofocus="">
@@ -127,4 +127,4 @@
             </div>
         </div>           
     </section>
- </x-base-layout> --}}
+ </x-base-layout>
