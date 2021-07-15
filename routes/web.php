@@ -2,9 +2,10 @@
 
 use App\Http\Livewire\HomeComponent;
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Admin\AdminDashboardComponent;
-use App\Http\Livewire\Customer\CustomerDashboardComponent;
 use App\Http\Livewire\ServiceCategoriesComponent;
+use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\Admin\AdminServiceCategoryComponent;
+use App\Http\Livewire\Customer\CustomerDashboardComponent;
 use App\Http\Livewire\Sprovider\SproviderDashboardComponent;
 
 /*
@@ -38,4 +39,5 @@ Route::middleware(['auth:sanctum', 'verified','authsprovider'])->group(function(
 // For Admin
 Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function(){ 
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+    Route::get('/admin/service-categories',AdminServiceCategoryComponent::class)->name('admin.service_categories');
 });
