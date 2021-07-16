@@ -28,6 +28,18 @@
                 <div class="container">
                     <div class="row portfolioContainer">
                         <div class="col-xs-12 profile1">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            All Service Categories
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="{{ route('admin.add_service_category') }}" class="btn btn-info pull-right">Add New Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
