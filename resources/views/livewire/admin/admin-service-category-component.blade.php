@@ -1,11 +1,13 @@
 <div>
     <style>
-        nav svg{
+        nav svg {
             height: 20px;
         }
-        nav .hidden{
+
+        nav .hidden {
             display: block !important;
         }
+
     </style>
     <div class="section-title-01 honmob">
         <div class="bg_parallax image_02_parallax"></div>
@@ -35,7 +37,8 @@
                                             All Service Categories
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="{{ route('admin.add_service_category') }}" class="btn btn-info pull-right">Add New Category</a>
+                                            <a href="{{ route('admin.add_service_category') }}"
+                                                class="btn btn-info pull-right">Add New Category</a>
                                         </div>
                                     </div>
                                 </div>
@@ -47,15 +50,20 @@
                                         <th>Image</th>
                                         <th>Name</th>
                                         <th>Slug</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($scategories as $scategory)
+                                    @foreach ($scategories as $scategory)
                                         <tr>
                                             <td>{{ $scategory->id }}</td>
-                                            <td><img src="{{ asset('images/categories') }}/{{ $scategory->image }}" width="60"></td>
+                                            <td><img src="{{ asset('images/categories') }}/{{ $scategory->image }}"
+                                                    width="60"></td>
                                             <td>{{ $scategory->name }}</td>
                                             <td>{{ $scategory->slug }}</td>
+                                            <td><a
+                                                    href="{{ route('admin.edit_service_category', ['category_id' => $scategory->id]) }}"><i
+                                                        class="fa fa-edit fa-2x text-info"></i></a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>
